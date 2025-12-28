@@ -72,9 +72,9 @@ To prevent accidental execution:
 s/\./[.]/g; s/@/[@]/g; s/http/hxxp/g; s/:\//[://]/g
 
 ## Result 
-Successfully:
-![Objective 2 screenshot](https://raw.githubusercontent.com/barrowreanna-cyber/SANSholiday-hack-challenge-2025/main/obj2.2.png)
 
+![Objective 2 screenshot](https://raw.githubusercontent.com/barrowreanna-cyber/SANSholiday-hack-challenge-2025/main/obj2.2.png)
+Successfully:
 - extracted every IOC
 - verified tool still detected each pattern
 - removed false positives (internal domains)
