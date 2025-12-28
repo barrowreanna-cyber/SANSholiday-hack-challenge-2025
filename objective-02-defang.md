@@ -46,7 +46,7 @@ To extract full URLs present in the phishing email, including executable downloa
 https?://[^\s]+
 
 ### Email Address Extraction
-Suspicious sender and contact email addresses were extracted using the following regex pattern:
+
 [a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}
 This pattern captured all valid email address formats present in the email.
 ### IP Address Extraction
