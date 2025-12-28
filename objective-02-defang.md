@@ -55,7 +55,7 @@ This pattern captured all valid email address formats present in the email.
 IP addresses found within the email headers were extracted using this regex pattern:
 \b(?:\d{1,3}\.){3}\d{1,3}\b
 
-Additional tweaks were required to remove internal, non-malicious indicators such as the dosisneighborhood.corp domain and IP addresses in the private range, as these belonged to the organization’s own infrastructure and did not represent attacker activity.
+Additional tweaks were required to remove internal, non-malicious indicators such as IP addresses in the private range ,as these belonged to the organization’s own infrastructure and did not represent attacker activity.
 
 ##  Defanging process
 
