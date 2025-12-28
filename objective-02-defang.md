@@ -42,6 +42,7 @@ This pattern captures:
 - Subdomains (e.g., mail.icicleinnovations.mail)
 - Internal domains (e.g., dosisneighborhood.corp)
 - During IOC extraction, the internal domain dosisneighborhood.corp was initially identified through regex-based parsing of email headers. As this domain belongs to the organization and does not represent attacker-controlled infrastructure, it was manually removed during analyst validation.
+![Objective 2 screenshot](https://raw.githubusercontent.com/barrowreanna-cyber/SANSholiday-hack-challenge-2025/main/obj2.1.png)
 
 ### URL Extraction
 To extract full URLs present in the phishing email, including executable download links, the following regex pattern was applied:
@@ -72,6 +73,7 @@ s/\./[.]/g; s/@/[@]/g; s/http/hxxp/g; s/:\//[://]/g
 
 ## Result 
 Successfully:
+![Objective 2 screenshot](https://raw.githubusercontent.com/barrowreanna-cyber/SANSholiday-hack-challenge-2025/main/obj2.2.png)
 
 - extracted every IOC
 - verified tool still detected each pattern
