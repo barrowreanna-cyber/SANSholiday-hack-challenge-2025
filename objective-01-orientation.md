@@ -15,7 +15,9 @@ Participants are instructed to:
 ## Solution: 
 Typing the word "answer" into the top of the terminal will mark this complete.
 
-![Screenshot of terminal](../obj1.png)
+![Objective 1 screenshot](https://raw.githubusercontent.com/barrowreanna-cyber/SANSholiday-hack-challenge-2025/main/obj1.png)
+
+
 
 ## Result
 Once the correct command is entered:
