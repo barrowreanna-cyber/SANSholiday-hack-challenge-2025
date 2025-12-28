@@ -14,8 +14,9 @@ Participants are instructed to:
 - submit it in the terminal input area
 ## Solution: 
 Typing the word "answer" into the top of the terminal will mark this complete.
-# Screenshot of terminal
-(obj1.png)
+
+![Screenshot of terminal](../obj1.png)
+
 ## Result
 Once the correct command is entered:
 - the system validates input
