@@ -1,1 +1,1 @@
-# SANSholiday-hack-challenge-2025
+# SANS-holiday-hack-challenge-2025
