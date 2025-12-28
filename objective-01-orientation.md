@@ -12,7 +12,8 @@ The interface contains:
 Participants are instructed to:
 - type a specific command or phrase exactly as instructed
 - submit it in the terminal input area
-
+## Solution: 
+Typing the word "answer" into the top of the terminal will mark this complete.
 ## Result
 Once the correct command is entered:
 - the system validates input
