@@ -35,11 +35,13 @@ Multiple suspicious emails were reported and the goal was to:
 ### Domain extraction
 To extract all domains, including root domains and subdomains appearing in both headers and the email body, the following regex pattern was used:
 \b(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}\b
+
+
 This pattern captures:
-Primary domains (e.g., icicleinnovations.mail)
-Subdomains (e.g., mail.icicleinnovations.mail)
-Internal domains (e.g., dosisneighborhood.corp)
-During IOC extraction, the internal domain dosisneighborhood.corp was initially identified through regex-based parsing of email headers. As this domain belongs to the organization and does not represent attacker-controlled infrastructure, it was manually removed during analyst validation.
+- Primary domains (e.g., icicleinnovations.mail)
+- Subdomains (e.g., mail.icicleinnovations.mail)
+- Internal domains (e.g., dosisneighborhood.corp)
+- During IOC extraction, the internal domain dosisneighborhood.corp was initially identified through regex-based parsing of email headers. As this domain belongs to the organization and does not represent attacker-controlled infrastructure, it was manually removed during analyst validation.
 
 ### URL Extraction
 To extract full URLs present in the phishing email, including executable download links, the following regex pattern was applied:
@@ -53,6 +55,8 @@ This pattern captured all valid email address formats present in the email.
 IP addresses found within the email headers were extracted using this regex pattern:
 \b(?:\d{1,3}\.){3}\d{1,3}\b
 
+Additional tweaks were required to remove internal, non-malicious indicators such as the dosisneighborhood.corp domain and IP addresses in the private range, as these belonged to the organization’s own infrastructure and did not represent attacker activity.
+
 ##  Defanging process
 
 To prevent accidental execution:
@@ -63,6 +67,8 @@ To prevent accidental execution:
 | `.` | `[.]` |
 | `@` | `[@]` |
 | `://` | `[://]` |
+ # Chained SED command to successfully defang all identified IOCs:
+s/\./[.]/g; s/@/[@]/g; s/http/hxxp/g; s/:\//[://]/g
 
 ## Result 
 Successfully:
