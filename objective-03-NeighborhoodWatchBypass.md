@@ -79,14 +79,16 @@ PATH hijacking via misconfigured sudo script
 Linux resolves command execution using the `PATH` environment variable.  
 In this environment, the sudo configuration included a `secure_path` that prioritized a user-writable directory before standard system directories.
 
-Because the script used relative command names (such as `ps` instead of `/bin/ps`), the system would execute a user-controlled binary if it existed earlier in the PATH. This created a privilege escalation vulnerability.
+Because the script used relative command names (such as `df` instead of `/bin/ps`), the system would execute a user-controlled binary if it existed earlier in the PATH. This created a privilege escalation vulnerability.
 
 ---
 
 ## Exploitation Process
 
-A malicious replacement for the `ps` command was created in the user’s personal bin directory.
-
+A malicious replacement for the `df` command was created in the user’s personal bin directory.By creating a new file called df which contains a script.
+```
+nano df
+```
 The script contained:
 
 ```
@@ -95,6 +97,9 @@ The script contained:
 ```
 
 The script simply launched a shell. The file was then made executable.
+```
+chmod u+x df
+```
 
 When the allowed sudo command was executed:
 
@@ -140,12 +145,4 @@ The command completed successfully with no errors, indicating that full system c
 
 ---
 
-## Reflection
 
-This challenge reinforced the risks of:
-
-- Running scripts as root without passwords  
-- Using insecure PATH ordering  
-- Calling binaries without absolute paths  
-
-It also demonstrated how small configuration mistakes can lead directly to full system compromise.
