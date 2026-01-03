@@ -37,10 +37,6 @@ This provides:
 - local address and port
 - process name and PID
 
-Example output format:
-
-
-
 The port following the colon represents the service port in use.
 
 ### 2. Verify service on identified port
@@ -55,9 +51,12 @@ curl http://localhost:12321
 A valid service response confirmed successful communication.
 
 ## Result
+![Objective 4 screenshot](https://raw.githubusercontent.com/barrowreanna-cyber/SANSholiday-hack-challenge-2025/main/obj4.png)
+
 - The port used by the Santa-Tracking Service was identified
 - Connectivity to the service was verified
 - The challenge objective was completed successfully
+  
 
 ## Lessons Learned
 - `ss` is a powerful tool for identifying running services and bound ports
