@@ -15,8 +15,11 @@ This repository documents my progress through the SANS Holiday Hack Challenge 20
 ### ✅ Objective 2 – It’s All About Defang
 [Read full write-up](objective-02-defang.md)
 
+---
 
 ### ✅ Objective 3 – Neighborhood Watch Bypass
 [Read full write-up](objective-03-NeighborhoodWatchBypass.md)
 
-
+---
+### ✅ Objective 4 – Santa's Gift-Tracking Service Port Mystery
+[Read full write-up](objective-04-Santa'sGift-TrackingServicePortMystery.md)
