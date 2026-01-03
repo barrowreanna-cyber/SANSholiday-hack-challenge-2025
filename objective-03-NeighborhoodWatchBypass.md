@@ -110,8 +110,8 @@ sudo /usr/local/bin/system_status.sh
 The following occurred:
 
 - The script ran with root privileges  
-- The system attempted to execute `ps`  
-- The user-controlled version of `ps` was executed first due to PATH ordering  
+- The system attempted to execute `df`  
+- The user-controlled version of `df` was executed first due to PATH ordering  
 - A root shell was spawned  
 
 Verification was performed using:
