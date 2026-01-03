@@ -134,15 +134,5 @@ With root privileges obtained, the final restore command was executed:
 
 The command completed successfully with no errors, indicating that full system control had been restored and the challenge objective was met.
 
----
-
-## Summary of Key Concepts
-
-- Misconfigured sudo permissions  
-- PATH hijacking  
-- Importance of absolute paths in privileged scripts  
-- Safe privilege escalation methodology  
-
----
 
 
